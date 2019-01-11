@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  root to: 'dashboard#index'
+
   resources :lps, controller: 'l_ps'
 
   resources :artists

@@ -1,24 +1,49 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-2">
+    <strong>Name:</strong>
+  </div>
+  <div class="col-sm-2">
+    <%= @artist.name %>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<br/>
 
-<p>
-  <strong>Description:</strong>
-  <%= @artist.description %>
-</p>
+<div class="row">
+  <div class="col-sm-2">
+    <strong>Description:</strong>
+  </div>
+  <div class="col-sm-2">
+    <%= @artist.description %>
+  </div>
+</div>
 
-<p>
-  <strong>Total Lps:</strong>
-  <%= @total_lps %>
-</p>
+<br/>
 
-<p>
+<div class="row">
+  <div class="col-sm-2">
+    <strong>Total Lps:</strong>
+  </div>
+  <div class="col-sm-2">
+    <%= @total_lps %>
+  </div>
+</div>
+
+<br/>
+<p class="well">
   <%= link_to 'List LPs that belong to the current artist', lps_path(artist_id: @artist) %>
 </p>
 
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+<br/>
+<hr/>
+<div class="row">
+  <div class="col-sm-1">
+    <%= button_to("Edit", edit_artist_path(@artist), method: :get, :class => "btn btn-primary") %>
+  </div>
+  <div class="col-sm-1">
+    <%= button_to("Back", artists_path, method: :get, :class => "btn btn-success") %>
+  </div>
+</div>
+

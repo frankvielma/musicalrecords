@@ -1,5 +1,10 @@
 <h1>New Lp</h1>
+<hr/>
 
 <%= render 'form', lp: @lp %>
 
-<%= link_to 'Back', lps_path %>
+<div class="row">
+  <div class="col-sm-1">
+    <%= button_to("Back", lps_path, method: :get, :class => "btn btn-success") %>
+  </div>
+</div>

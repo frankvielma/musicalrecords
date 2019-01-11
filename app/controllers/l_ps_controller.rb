@@ -32,6 +32,7 @@ class LPsController < ApplicationController
   # POST /lps.json
   def create
     @lp = Lp.new(lp_params)
+    @artists = Artist.all
 
     respond_to do |format|
       if @lp.save

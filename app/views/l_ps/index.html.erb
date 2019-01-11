@@ -1,7 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Lps</h1>
-
+<br/>
+<div class="row">
+  <div class="col-sm-2">
+    Filter by Artist:
+  </div>
+  <div class="col-sm-2">
+    <%= select_tag :artist_id, options_for_select(@artists.all.map{|s|[s.name, s.id]}, params[:artist_id]), {:class => "form-control"} %>
+  </div>
+</div>
+<hr/>
 <table class="table">
   <thead>
     <tr>

@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function () {
+  $("#artist_id").on("click", function(event) {
+    var artist_id = $("#artist_id").val();
+    window.location.href = "/lps?artist_id="+artist_id;
+  });
+});

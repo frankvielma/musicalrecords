@@ -5,6 +5,7 @@ class LPsController < ApplicationController
   # GET /lps.json
   def index
     artist_id = params[:artist_id]
+    @artists = Artist.all
     if artist_id.present?
       @lps = Lp.where(artist_id: artist_id)
     else

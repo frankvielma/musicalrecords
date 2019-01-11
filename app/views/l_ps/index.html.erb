@@ -7,7 +7,8 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th>Artist</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -16,6 +17,7 @@
       <tr>
         <td><%= lp.name %></td>
         <td><%= lp.description %></td>
+        <td><%= lp.artist.name %></td>
         <td><%= link_to 'Show', lp %></td>
         <td><%= link_to 'Edit', edit_lp_path(lp) %></td>
         <td><%= link_to 'Destroy', lp, method: :delete, data: { confirm: 'Are you sure?' } %></td>

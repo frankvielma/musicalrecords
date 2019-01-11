@@ -15,10 +15,12 @@ class LPsController < ApplicationController
   # GET /lps/new
   def new
     @lp = Lp.new
+    @artists = Artist.all
   end
 
   # GET /lps/1/edit
   def edit
+    @artists = Artist.all
   end
 
   # POST /lps
@@ -69,6 +71,6 @@ class LPsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lp_params
-      params.require(:lp).permit(:name, :description)
+      params.require(:lp).permit(:name, :description, :artist_id)
     end
 end

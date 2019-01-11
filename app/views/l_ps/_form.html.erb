@@ -21,6 +21,11 @@
     <%= f.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= f.select :artist_id, options_for_select(@artists.all.map{|s|[s.name, s.id]}, selected: f.object.artist_id) %>
+
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

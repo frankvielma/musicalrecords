@@ -10,5 +10,11 @@
   <%= @lp.description %>
 </p>
 
+<p>
+  <strong>Artist:</strong>
+  <%= @lp.artist.name %>
+</p>
+
+
 <%= link_to 'Edit', edit_lp_path(@lp) %> |
 <%= link_to 'Back', lps_path %>

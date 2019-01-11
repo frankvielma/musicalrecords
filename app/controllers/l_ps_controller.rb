@@ -49,6 +49,7 @@ class LPsController < ApplicationController
   # PATCH/PUT /lps/1
   # PATCH/PUT /lps/1.json
   def update
+    @artists = Artist.all
     respond_to do |format|
       if @lp.update(lp_params)
         format.html { redirect_to @lp, notice: 'Lp was successfully updated.' }

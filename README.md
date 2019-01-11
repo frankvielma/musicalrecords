@@ -1,23 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 Things you may want to cover:
 
 * Ruby version: ruby-2.3.0
 
-* System dependencies: 
-
-* Configuration
-
-* Database creation
-
-* Database initialization
+* Step to installation (Linux):
+  - git clone https://github.com/frankvielma/musicalrecords
+  - cd musicalrecords
+  - bundle
+  - rake db:setup
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+  - rspec -fd spec
 

@@ -4,7 +4,12 @@ class LPsController < ApplicationController
   # GET /lps
   # GET /lps.json
   def index
-    @lps = Lp.all
+    artist_id = params[:artist_id]
+    if artist_id.present?
+      @lps = Lp.where(artist_id: artist_id)
+    else
+      @lps = Lp.all
+    end
   end
 
   # GET /lps/1

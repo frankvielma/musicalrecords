@@ -10,5 +10,15 @@
   <%= @artist.description %>
 </p>
 
+<p>
+  <strong>Total Lps:</strong>
+  <%= @total_lps %>
+</p>
+
+<p>
+  <%= link_to 'List LPs that belong to the current artist', lps_path(artist_id: @artist) %>
+</p>
+
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

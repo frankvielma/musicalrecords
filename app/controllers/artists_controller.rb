@@ -10,6 +10,7 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
+    @total_lps = @artist.lps.count
   end
 
   # GET /artists/new

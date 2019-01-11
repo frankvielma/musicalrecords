@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "lps/show", type: :view do
+RSpec.describe "l_ps/show", type: :view do
   before(:each) do
+    Artist.create!(name: 'test')
     @lp = assign(:lp, Lp.create!(
       :name => "Name",
-      :description => "MyText"
+      :description => "MyText",
+      :artist_id => Artist.first.id
     ))
   end
 

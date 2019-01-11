@@ -15,7 +15,7 @@ RSpec.describe "artists/new", type: :view do
 
       assert_select "input#artist_name[name=?]", "artist[name]"
 
-      assert_select "textarea#artist_description[name=?]", "artist[description]"
+      assert_select "input#artist_description[name=?]", "artist[description]"
     end
   end
 end

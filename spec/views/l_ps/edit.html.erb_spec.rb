@@ -18,7 +18,7 @@ RSpec.describe "l_ps/edit", type: :view do
 
       assert_select "input#lp_name[name=?]", "lp[name]"
 
-      assert_select "textarea#lp_description[name=?]", "lp[description]"
+      assert_select "input#lp_description[name=?]", "lp[description]"
     end
   end
 end
